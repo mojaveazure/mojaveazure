@@ -12,6 +12,8 @@ jobs:
     env:
       RSPM: https://demo.rstudiopm.com/all/__linux__/focal/latest
     steps:
+      - name: Install Git
+        run: apt update && apt install -y git
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Pandoc
