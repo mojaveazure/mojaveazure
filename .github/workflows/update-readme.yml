@@ -8,11 +8,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: rocker:r-base
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup R
-        uses: r-lib/actions/setup-r@master
+      # - name: Setup R
+      #   uses: r-lib/actions/setup-r@master
       - name: Setup Pandoc
         uses: r-lib/actions/setup-pandoc@master
       - name: Install dependencies
@@ -21,7 +22,7 @@ jobs:
       - name: Knit README.Rmd
         run: rmarkdown::render('README.Rmd')
         shell: Rscript {0}
-      - name: Add GitHub Activity
-        uses: jamesgeorge007/github-activity-readme@v0.1.7
-        env:
-          GITHUB_TOKEN: ${secrets.GITHUB_TOKEN}
+      # - name: Add GitHub Activity
+      #   uses: jamesgeorge007/github-activity-readme@v0.1.7
+      #   env:
+      #     GITHUB_TOKEN: ${secrets.GITHUB_TOKEN}
