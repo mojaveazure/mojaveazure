@@ -19,22 +19,10 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 args <- params
-if (is.null(x = args$user)) {
+if (is.null(x = args[["user"]])) {
   args$user <- basename(path = getwd())
 }
 shields <- "https://img.shields.io/badge"
-```
-
-```{r packages, echo=FALSE, results="hide"}
-if (!requireNamespace("httr", quietly = TRUE)) {
-  tryCatch(
-    expr = install.packages("httr"),
-    error = function(...) {
-      stop("Cannot find or install httr", call. = FALSE)
-    }
-  )
-}
-library(httr)
 ```
 
 # Hello World
@@ -63,14 +51,15 @@ for (i in seq_along(along.with = social.base)) {
     "[![",
     social.base[[social]]$alt,
     "](",
-    modify_url(
-      url = shields,
-      path = paste(basename(path = shields), paste0("--", tolower(x = social)), sep  = "/"),
-      query = list(
-        label = social,
-        logo = social,
-        style = "social"
-      )
+    paste0(
+      shields,
+      "/--",
+      tolower(x = social),
+      "?label=",
+      social,
+      "&logo=",
+      social,
+      "&style=social"
     ),
     ")](",
     paste(social.base[[social]]$base, args[[key]], sep = "/"),
@@ -99,23 +88,26 @@ cat(Filter(f = nchar, x = social.badges), sep = "\n")
 ```{r build.urls, echo=FALSE, results="hide"}
 stats.gh <- "https://github.com/anuraghazra/github-readme-stats"
 stats.base <- "https://github-readme-stats.vercel.app/api"
-stats.url <- modify_url(
-  url = stats.base,
-  query = list(
-    username = args$user,
-    count_private = tolower(x = args$stats.private),
-    show_icons = tolower(x = args$stats.icons)
+stats.url <- paste0(
+  stats.base,
+  "?username=",
+  args$user,
+  "&count_private=", 
+  tolower(x = args$stats.private),
+  "&show_icons=", 
+  tolower(x = args$stats.icons)
+)
+langs.url <- paste0(
+  stats.base,
+  "/top-langs",
+  "?username=",
+  args$user,
+  ifelse(
+    test = is.null(x = args$langs.layout),
+    yes = "",
+    no = paste0("&layout=", args$langs.layout)
   )
 )
-langs.url <- modify_url(
-  url = stats.base,
-  path = file.path("api", "top-langs/"),
-  query = list(
-    username = args$user,
-    layout = args$langs.layout
-  )
-)
-"https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=filiptronicek"
 ```
 
 <a href="`r stats.gh`">
