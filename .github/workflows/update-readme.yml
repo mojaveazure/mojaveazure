@@ -8,15 +8,28 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: rocker/r-base
+    container: rocker/r-ubuntu:20.04
+    env:
+      RSPM: https://demo.rstudiopm.com/all/__linux__/focal/latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Pandoc
         run: apt update && apt install -y pandoc
+      - name: Configure RSPM
+        run: |
+          echo 'options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))' | tee -a /etc/R/Rprofile.site
       - name: Install dependencies
-        run: install.packages('rmarkdown')
+        run: install.packages('rmarkdown', repos = Sys.getenv('RSPM'))
         shell: Rscript {0}
       - name: Knit README.Rmd
         run: rmarkdown::render('README.Rmd')
         shell: Rscript {0}
+      - name: Add changes
+        run: |
+          git diff
+          git config --global user.email "readme-bot@example.com"
+          git config --global user.name "READMEbot"
+          git add -A
+          git commit -m "Updated content" || exit 0
+          git push
