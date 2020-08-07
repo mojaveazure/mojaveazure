@@ -1,0 +1,130 @@
+---
+output: 
+  github_document:
+    html_preview: false
+params:
+  user: NULL
+  user.twitter: NULL
+  user.linkedin: "pauljhoffman"
+  stats.private: TRUE
+  stats.icons: TRUE
+  langs.layout: "compact"
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+args <- params
+if (is.null(x = args$user)) {
+  args$user <- basename(path = getwd())
+}
+shields <- "https://img.shields.io/badge"
+```
+
+```{r packages, echo=FALSE, results="hide"}
+if (!requireNamespace("httr", quietly = TRUE)) {
+  tryCatch(
+    expr = install.packages("httr"),
+    error = function(...) {
+      stop("Cannot find or install httr", call. = FALSE)
+    }
+  )
+}
+library(httr)
+```
+
+# Hello World
+
+I am Paul Hoffman, a senior bioinformatician wtih the [Satija](https://satijalab.org) and [Lappalainen](https://tllab.org) Labs at the New York Genome Center. My work revolves around building software and for bioinformatic analyses, including an [R package](https://github.com/satijalab/seurat) for analyzing single-cell data, along with several [extension](https://github.com/satijalab/seurat-data) [packages](https://github.com/mojaveazure/seurat-disk), and a [pipeline](https://github.com/LappalainenLab/RNApipeline) for processing RNA-seq data. I work primarily in R and Python, but am always learning.
+
+## Social
+
+<!-- badges: start -->
+```{r social.badges, echo=FALSE, results="asis"}
+social.base <- list(
+  Twitter = list(alt = "Follow on Twitter", base = "https://twitter.com"),
+  LinkedIn = list(
+    alt = "Connect on LinkedIn",
+    base = "https://www.linkedin.com/in"
+  )
+)
+social.badges <- vector(mode = "character", length = length(x = social.base))
+for (i in seq_along(along.with = social.base)) {
+  social <- names(x = social.base)[i]
+  key <- paste0("user.", tolower(x = social))
+  if (is.null(x = args[[key]])) {
+    next
+  }
+  social.badges[[i]] <- paste0(
+    "[![",
+    social.base[[social]]$alt,
+    "](",
+    modify_url(
+      url = shields,
+      path = paste(basename(path = shields), paste0("--", tolower(x = social)), sep  = "/"),
+      query = list(
+        label = social,
+        logo = social,
+        style = "social"
+      )
+    ),
+    ")](",
+    paste(social.base[[social]]$base, args[[key]], sep = "/"),
+    ")"
+  )
+}
+cat(Filter(f = nchar, x = social.badges), sep = "\n")
+```
+
+<!-- badges: end -->
+
+## Technologies Used
+
+<!-- badges: start -->
+![](https://img.shields.io/badge/r-%23276DC3.svg?&logo=r&logoColor=white)
+![](https://img.shields.io/badge/python%20-%2314354C.svg?&logo=python&logoColor=white)
+![](https://img.shields.io/badge/markdown-%23000000.svg?&logo=markdown&logoColor=white)
+![](https://img.shields.io/badge/git%20-%23F05033.svg?&logo=git&logoColor=white)
+![](https://img.shields.io/badge/github%20-%23121011.svg?&logo=github&logoColor=white)
+![](https://img.shields.io/badge/docker%20-%230db7ed.svg?&logo=docker&logoColor=white)
+<!-- ![](https://img.shields.io/badge/Google%20Cloud%20-%234285F4.svg?&logo=google-cloud&logoColor=white) -->
+<!-- badges: end -->
+
+## Basic Stats
+
+```{r build.urls, echo=FALSE, results="hide"}
+stats.gh <- "https://github.com/anuraghazra/github-readme-stats"
+stats.base <- "https://github-readme-stats.vercel.app/api"
+stats.url <- modify_url(
+  url = stats.base,
+  query = list(
+    username = args$user,
+    count_private = tolower(x = args$stats.private),
+    show_icons = tolower(x = args$stats.icons)
+  )
+)
+langs.url <- modify_url(
+  url = stats.base,
+  path = file.path("api", "top-langs/"),
+  query = list(
+    username = args$user,
+    layout = args$langs.layout
+  )
+)
+"https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=filiptronicek"
+```
+
+<a href="`r stats.gh`">
+  <img align="center" src="`r stats.url`" />
+</a>
+<a href="`r stats.gh`">
+  <img align="center" src="`r langs.url`" />
+</a>
+
+## Recent Activity
+
+<!--START_SECTION:activity-->
