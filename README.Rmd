@@ -140,7 +140,7 @@ PullRequestEvent <- function(e) {
   return(paste(
     action,
     MDLink(
-      msg = paste(e$repo$name, e$payload$pull_request$number, "#"),
+      msg = paste(e$repo$name, e$payload$pull_request$number, sep = "#"),
       link = e$payload$pull_request$html_url
     )
   ))
