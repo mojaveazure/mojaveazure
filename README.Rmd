@@ -9,6 +9,7 @@ params:
   stats.private: TRUE
   stats.icons: TRUE
   langs.layout: "compact"
+  recent.n: 6
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -25,9 +26,130 @@ if (is.null(x = args[["user"]])) {
 shields <- "https://img.shields.io/badge"
 ```
 
+```{r packages, include=FALSE}
+library(httr)
+library(jsonlite)
+```
+
+```{r functions, include=FALSE}
+#' Allowed Events
+#'
+#' Is a GitHub event allowed in the recent activity section. Allowed events
+#' fall into one of the following categories
+#' \itemize{
+#'  \item \dQuote{IssuesEvent}
+#  \item \dQuote{IssueCommentEvent}
+#'  \item \dQuote{PullRequestEvent}
+#' }
+#'
+#' @param e An event entry from the GitHub JSON
+#'
+#' @return \code{TRUE} if the event is allowed, otherwise \code{FALSE}
+#'
+AllowedEvent <- function(e) {
+    events.allowed <- c(
+    "IssuesEvent",
+    # "IssueCommentEvent",
+    "PullRequestEvent"
+  )
+  return(e$type %in% events.allowed)
+}
+
+#' Capitalize A String
+#'
+#' @param x A \code{\link[base]{character}} vector
+#'
+#' @return \code{x} with the first letter capitalized
+#'
+Cap <- function(x) {
+  x <- paste(x, collapse = " ")
+  if (nchar(x = x) == 1) {
+    return(toupper(x = x))
+  }
+  return(paste0(
+    toupper(x = substr(x = x, start = 1, stop = 1)),
+    substr(x = x, start = 2, stop = nchar(x = x))
+  ))
+}
+
+#' Build a Markdown Link
+#'
+#' @inheritParams Cap
+#'
+#' @return A \code{\link[base]{character}} vector with a markdown-style link 
+#' where \code{msg} points to \code{link}
+#'
+MDLink <- function(msg, link) {
+  return(paste0("[", msg, "](", link, ")"))
+}
+
+#' Format Event Logs
+#'
+#' @inheritParams AllowedEvent
+#'
+#' @return \code{IssueLink}: The URL to GitHub issue
+#'
+#' @name FormatEvent
+#' @rdname FormatEvent
+#'
+#' @return \code{IssueEvent}: A character string with the formatted issue event
+#'
+IssueEvent <- function(e) {
+  return(paste(
+    Cap(x = e$payload$action),
+    MDLink(
+      msg = paste(e$repo$name, e$payload$issue$number, sep = "#"),
+      link = e$payload$issue$html_url
+    )
+  ))
+}
+
+#' @name FormatEvent
+#' @rdname FormatEvent
+#'
+#' @return \code{IssueCommentEvent}: A character string with the formatted
+#' comment event
+#'
+IssueCommentEvent <- function(e) {
+  return(paste(
+    "Commented on",
+    MDLink(
+      msg = paste(e$repo$name, e$payload$issue$number, sep = "#"), 
+      link = e$payload$comment$html_url
+    )
+  ))
+}
+
+#' @name FormatEvent
+#' @rdname FormatEvent
+#'
+#' @return \code{PullRequestEvent}: A character string with the formatted pull
+#' request event
+#'
+PullRequestEvent <- function(e) {
+  action <- e$payload$action
+  action <- switch(
+    EXPR = action,
+    "closed" = ifelse(
+      test = e$payload$pull_request$merged, 
+      yes = "Merged",
+      no = "Closed"
+    ),
+    Cap(x = action)
+  )
+  return(paste(
+    action,
+    MDLink(
+      msg = paste(e$repo$name, e$payload$pull_request$number, "#"),
+      link = e$payload$pull_request$html_url
+    )
+  ))
+}
+```
+
 # Hello World
 
-I am Paul Hoffman, a senior bioinformatician wtih the [Satija](https://satijalab.org) and [Lappalainen](https://tllab.org) Labs at the New York Genome Center. My work revolves around building software and for bioinformatic analyses, including an [R package](https://github.com/satijalab/seurat) for analyzing single-cell data, along with several [extension](https://github.com/satijalab/seurat-data) [packages](https://github.com/mojaveazure/seurat-disk), and a [pipeline](https://github.com/LappalainenLab/RNApipeline) for processing RNA-seq data. I work primarily in R and Python, but am always learning.
+I am Paul Hoffman, a senior bioinformatician with the [Satija](https://satijalab.org) and [Lappalainen](https://tllab.org) Labs at the New York Genome Center. My work revolves around building software and for bioinformatic analyses, including an [R package](https://github.com/satijalab/seurat) for analyzing single-cell data, along with several [extension](https://github.com/satijalab/seurat-data) [packages](https://github.com/mojaveazure/seurat-disk), and a [pipeline](https://github.com/LappalainenLab/RNApipeline) for processing RNA-seq data. I work primarily in R and Python, but am always learning.
 
 ## Social
 
@@ -119,4 +241,44 @@ langs.url <- paste0(
 
 ## Recent Activity
 
-<!--START_SECTION:activity-->
+```{r recent.activity, echo=FALSE, results="asis"}
+events.url <- paste(
+  "https://api.github.com/users",
+  args$user,
+  "events/public",
+  sep = "/"
+)
+response <- GET(url = events.url)
+if (!identical(x = status_code(x = response), y = 200L)) {
+  cat("No recent activity found")
+} else {
+  events <- fromJSON(txt = as.character(x = response), simplifyVector = FALSE)
+  events <- Filter(f = AllowedEvent, x = events)
+  page <- 2L
+  while (length(x = events) < args$recent.n) {
+    response <- GET(url = paste0(events.url, "?page=", page))
+    if (!identical(x = status_code(x = response), y = 200L)) {
+      break
+    }
+    resp.e <- fromJSON(txt = as.character(x = response), simplifyVector = FALSE)
+    resp.e <- Filter(f = AllowedEvent, x = resp.e)
+    events <- append(x = events, values = resp.e)
+    page <- page + 1L
+  }
+}
+events <- head(x = events, n = args$recent.n)
+event.msgs <- vector(mode = "character", length = length(x = events))
+for (i in seq_along(along.with = events)) {
+  e <- events[[i]]
+  event.msgs[[i]] <- switch(
+    EXPR = e$type,
+    "IssuesEvent" = IssueEvent(e = e),
+    "IssueCommentEvent" = IssueCommentEvent(e = e),
+    "PullRequestEvent" = PullRequestEvent(e = e)
+  )
+}
+event.msgs <- paste(" -", event.msgs)
+cat(event.msgs, sep = "\n")
+```
+
+Last updated: `r Sys.time()`
