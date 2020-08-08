@@ -39,9 +39,9 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 ## Basic Stats
 
 <a href="https://github.com/anuraghazra/github-readme-stats">
-<img align="center" src="https://github-readme-stats.vercel.app/api?username=mojaveazure&count_private=true&show_icons=true" />
+<img align="center" src="https://github-readme-stats.vercel.app/api?username=mojaveazure&count_private=true&show_icons=true" alt="GitHub stats" />
 </a> <a href="https://github.com/anuraghazra/github-readme-stats">
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=mojaveazure&layout=compact" />
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=mojaveazure&layout=compact" alt= "Top languages" />
 </a>
 
 ## Recent Activity
@@ -58,5 +58,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     \#](https://github.com/mojaveazure/seurat-disk/pull/16)
   - Closed
     [satijalab/seurat\#3287](https://github.com/satijalab/seurat/issues/3287)
-
-Last updated: 2020-08-08 01:11:17
