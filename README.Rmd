@@ -1,5 +1,5 @@
 ---
-output: 
+output:
   github_document:
     html_preview: false
 params:
@@ -76,7 +76,7 @@ Cap <- function(x) {
 #'
 #' @inheritParams Cap
 #'
-#' @return A \code{\link[base]{character}} vector with a markdown-style link 
+#' @return A \code{\link[base]{character}} vector with a markdown-style link
 #' where \code{msg} points to \code{link}
 #'
 MDLink <- function(msg, link) {
@@ -114,7 +114,7 @@ IssueCommentEvent <- function(e) {
   return(paste(
     "Commented on",
     MDLink(
-      msg = paste(e$repo$name, e$payload$issue$number, sep = "#"), 
+      msg = paste(e$repo$name, e$payload$issue$number, sep = "#"),
       link = e$payload$comment$html_url
     )
   ))
@@ -131,7 +131,7 @@ PullRequestEvent <- function(e) {
   action <- switch(
     EXPR = action,
     "closed" = ifelse(
-      test = e$payload$pull_request$merged, 
+      test = e$payload$pull_request$merged,
       yes = "Merged",
       no = "Closed"
     ),
@@ -214,9 +214,9 @@ stats.url <- paste0(
   stats.base,
   "?username=",
   args$user,
-  "&count_private=", 
+  "&count_private=",
   tolower(x = args$stats.private),
-  "&show_icons=", 
+  "&show_icons=",
   tolower(x = args$stats.icons)
 )
 langs.url <- paste0(
@@ -233,10 +233,10 @@ langs.url <- paste0(
 ```
 
 <a href="`r stats.gh`">
-  <img align="center" src="`r stats.url`" />
+  <img align="center" src="`r stats.url`" alt="GitHub stats" />
 </a>
 <a href="`r stats.gh`">
-  <img align="center" src="`r langs.url`" />
+  <img align="center" src="`r langs.url`" alt= "Top languages" />
 </a>
 
 ## Recent Activity
@@ -280,5 +280,3 @@ for (i in seq_along(along.with = events)) {
 event.msgs <- paste(" -", event.msgs)
 cat(event.msgs, sep = "\n")
 ```
-
-Last updated: `r Sys.time()`
