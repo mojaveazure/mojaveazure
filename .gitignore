@@ -1,6 +1,12 @@
+#   Ignore RStudio files and directories
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+#   Ignore system files and directories
 .vscode
 .DS_Store
+
+#   Ignore unused output files
+*.html
