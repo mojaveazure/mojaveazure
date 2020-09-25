@@ -50,7 +50,8 @@ AllowedEvent <- function(e) {
     events.allowed <- c(
     "IssuesEvent",
     # "IssueCommentEvent",
-    "PullRequestEvent"
+    "PullRequestEvent",
+    "ReleaseEvent"
   )
   return(e$type %in% events.allowed)
 }
@@ -142,6 +143,22 @@ PullRequestEvent <- function(e) {
     MDLink(
       msg = paste(e$repo$name, e$payload$pull_request$number, sep = "#"),
       link = e$payload$pull_request$html_url
+    )
+  ))
+}
+
+#' @name FormatEvent
+#' @rdname FormatEvent
+#'
+#' @return \code{ReleaseEvent}: A character string with the formatted release
+#' event
+#'
+ReleaseEvent <- function(e) {
+  return(paste(
+    Cap(x = e$payload$action),
+    MDLink(
+      msg = paste(e$repo$name, e$payload$release$tag_name),
+      link = e$payload$release$html_url
     )
   ))
 }
@@ -274,7 +291,8 @@ for (i in seq_along(along.with = events)) {
     EXPR = e$type,
     "IssuesEvent" = IssueEvent(e = e),
     "IssueCommentEvent" = IssueCommentEvent(e = e),
-    "PullRequestEvent" = PullRequestEvent(e = e)
+    "PullRequestEvent" = PullRequestEvent(e = e),
+    "ReleaseEvent" = ReleaseEvent(e = e)
   )
 }
 event.msgs <- paste(" -", event.msgs)
