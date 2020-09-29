@@ -46,6 +46,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+  - Merged
+    [satijalab/seurat-wrappers\#69](https://github.com/satijalab/seurat-wrappers/pull/69)
   - Opened
     [powellgenomicslab/Nebulosa\#1](https://github.com/powellgenomicslab/Nebulosa/pull/1)
   - Published [satijalab/seurat
@@ -56,5 +58,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [satijalab/seurat\#3552](https://github.com/satijalab/seurat/issues/3552)
   - Opened
     [satijalab/seurat\#3548](https://github.com/satijalab/seurat/pull/3548)
-  - Closed
-    [satijalab/seurat\#3543](https://github.com/satijalab/seurat/issues/3543)
