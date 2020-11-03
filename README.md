@@ -47,6 +47,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 ## Recent Activity
 
   - Merged
+    [satijalab/azimuth\#11](https://github.com/satijalab/azimuth/pull/11)
+  - Merged
     [satijalab/azimuth\#10](https://github.com/satijalab/azimuth/pull/10)
   - Merged
     [satijalab/azimuth\#7](https://github.com/satijalab/azimuth/pull/7)
@@ -56,5 +58,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [satijalab/azimuth\#9](https://github.com/satijalab/azimuth/pull/9)
   - Opened
     [satijalab/azimuth\#9](https://github.com/satijalab/azimuth/pull/9)
-  - Closed
-    [satijalab/seurat\#3617](https://github.com/satijalab/seurat/issues/3617)
