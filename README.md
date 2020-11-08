@@ -46,6 +46,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+  - Opened
+    [rstudio/renv\#565](https://github.com/rstudio/renv/issues/565)
   - Merged
     [satijalab/azimuth\#11](https://github.com/satijalab/azimuth/pull/11)
   - Merged
@@ -55,6 +57,4 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
   - Closed
     [satijalab/seurat\#3656](https://github.com/satijalab/seurat/issues/3656)
   - Merged
-    [satijalab/azimuth\#9](https://github.com/satijalab/azimuth/pull/9)
-  - Opened
     [satijalab/azimuth\#9](https://github.com/satijalab/azimuth/pull/9)
