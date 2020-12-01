@@ -47,6 +47,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 ## Recent Activity
 
   - Closed
+    [rstudio/shiny\#3154](https://github.com/rstudio/shiny/issues/3154)
+  - Closed
     [satijalab/seurat\#3761](https://github.com/satijalab/seurat/issues/3761)
   - Closed
     [satijalab/seurat\#3732](https://github.com/satijalab/seurat/issues/3732)
@@ -56,5 +58,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [satijalab/azimuth\#16](https://github.com/satijalab/azimuth/pull/16)
   - Opened
     [rstudio/shiny\#3154](https://github.com/rstudio/shiny/issues/3154)
-  - Opened
-    [satijalab/azimuth\#14](https://github.com/satijalab/azimuth/pull/14)
