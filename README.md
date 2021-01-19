@@ -46,6 +46,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+  - Published [mojaveazure/seurat-object
+    v4.0.0](https://github.com/mojaveazure/seurat-object/releases/tag/v4.0.0)
   - Closed
     [satijalab/seurat\#3905](https://github.com/satijalab/seurat/issues/3905)
   - Merged
@@ -56,5 +58,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [satijalab/seurat\#3820](https://github.com/satijalab/seurat/issues/3820)
   - Published [satijalab/seurat
     v3.2.3](https://github.com/satijalab/seurat/releases/tag/v3.2.3)
-  - Opened
-    [satijalab/seurat\#3825](https://github.com/satijalab/seurat/pull/3825)
