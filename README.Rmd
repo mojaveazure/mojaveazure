@@ -9,7 +9,7 @@ params:
   stats.private: TRUE
   stats.icons: TRUE
   langs.layout: "compact"
-  recent.n: 6
+  recent.n: 10
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
