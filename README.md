@@ -46,6 +46,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+  - Closed
+    [satijalab/seurat\#5032](https://github.com/satijalab/seurat/issues/5032)
   - Opened
     [jeinson/ExOutBench\#1](https://github.com/jeinson/ExOutBench/pull/1)
   - Published [satijalab/seurat
@@ -63,6 +65,4 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
   - Published [satijalab/seurat
     v4.0.3](https://github.com/satijalab/seurat/releases/tag/v4.0.3)
   - Merged
-    [satijalab/seurat\#4608](https://github.com/satijalab/seurat/pull/4608)
-  - Opened
     [satijalab/seurat\#4608](https://github.com/satijalab/seurat/pull/4608)
