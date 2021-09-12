@@ -64,5 +64,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [satijalab/seurat\#4900](https://github.com/satijalab/seurat/issues/4900)
   - Closed
     [satijalab/seurat\#4751](https://github.com/satijalab/seurat/issues/4751)
-  - Closed
-    [satijalab/seurat\#4581](https://github.com/satijalab/seurat/issues/4581)
