@@ -46,6 +46,10 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+  - Published [mojaveazure/seurat-object
+    v4.0.4](https://github.com/mojaveazure/seurat-object/releases/tag/v4.0.4)
+  - Merged
+    [mojaveazure/seurat-object\#35](https://github.com/mojaveazure/seurat-object/pull/35)
   - Opened
     [mojaveazure/seurat-object\#35](https://github.com/mojaveazure/seurat-object/pull/35)
   - Merged
@@ -62,7 +66,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [mojaveazure/seurat-object\#30](https://github.com/mojaveazure/seurat-object/pull/30)
   - Merged
     [mojaveazure/seurat-object\#29](https://github.com/mojaveazure/seurat-object/pull/29)
-  - Opened
-    [mojaveazure/seurat-object\#29](https://github.com/mojaveazure/seurat-object/pull/29)
-  - Published [mojaveazure/seurat-object
-    v4.0.3](https://github.com/mojaveazure/seurat-object/releases/tag/v4.0.3)
