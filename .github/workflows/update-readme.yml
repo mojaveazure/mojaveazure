@@ -18,16 +18,17 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Pandoc
         run: apt update && apt install -y pandoc
-      - name: Configure RSPM
-        run: |
-          echo 'options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))' | tee -a /etc/R/Rprofile.site
+      # - name: Configure RSPM
+      #   run: |
+      #     echo 'options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))' | tee -a /etc/R/Rprofile.site
       - name: Install system dependencies
         run: |
           apt update && apt install -y \
             libcurl4-openssl-dev \
             libssl-dev
       - name: Install dependencies
-        run: install.packages(c('rmarkdown', 'httr', 'jsonlite'), repos = Sys.getenv('RSPM'))
+        # run: install.packages(c('rmarkdown', 'httr', 'jsonlite'), repos = Sys.getenv('RSPM'))
+        run: install.packages(c('rmarkdown', 'httr', jsonlite'), repos = 'https://cloud.r-project.org')
         shell: Rscript {0}
       - name: Knit README.Rmd
         run: rmarkdown::render('README.Rmd')
