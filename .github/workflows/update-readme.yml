@@ -28,7 +28,7 @@ jobs:
             libssl-dev
       - name: Install dependencies
         # run: install.packages(c('rmarkdown', 'httr', 'jsonlite'), repos = Sys.getenv('RSPM'))
-        run: install.packages(c('rmarkdown', 'httr', jsonlite'), repos = 'https://cloud.r-project.org')
+        run: install.packages(c('rmarkdown', 'httr', 'jsonlite'), repos = 'https://cloud.r-project.org')
         shell: Rscript {0}
       - name: Knit README.Rmd
         run: rmarkdown::render('README.Rmd')
