@@ -15,7 +15,7 @@ jobs:
       - name: Install Git
         run: apt update && apt install -y git
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@latest
       - name: Setup Pandoc
         run: apt update && apt install -y pandoc
       # - name: Configure RSPM
