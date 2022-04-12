@@ -29,7 +29,7 @@ jobs:
       #     echo 'options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))' | tee -a /etc/R/Rprofile.site
       - name: Install system dependencies
         run: |
-          apt update && apt install -y \
+          sudo apt update && sudo apt install -y \
             libcurl4-openssl-dev \
             libssl-dev
       - name: Install dependencies
