@@ -47,6 +47,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 ## Recent Activity
 
 -   Opened
+    [rstudio/rstudio#11101](https://github.com/rstudio/rstudio/issues/11101)
+-   Opened
     [satijalab/seurat#5899](https://github.com/satijalab/seurat/pull/5899)
 -   Merged
     [mojaveazure/seurat-object#44](https://github.com/mojaveazure/seurat-object/pull/44)
@@ -64,5 +66,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [mojaveazure/seurat-disk#106](https://github.com/mojaveazure/seurat-disk/pull/106)
 -   Closed
     [mojaveazure/seurat-disk#105](https://github.com/mojaveazure/seurat-disk/issues/105)
--   Closed
-    [mojaveazure/seurat-disk#97](https://github.com/mojaveazure/seurat-disk/issues/97)
