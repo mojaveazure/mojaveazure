@@ -46,6 +46,8 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+-   Merged
+    [mojaveazure/seurat-object#46](https://github.com/mojaveazure/seurat-object/pull/46)
 -   Opened
     [plotly/plotly.R#2131](https://github.com/plotly/plotly.R/pull/2131)
 -   Published [satijalab/seurat
@@ -64,5 +66,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [rstudio/rstudio#11101](https://github.com/rstudio/rstudio/issues/11101)
 -   Opened
     [satijalab/seurat#5899](https://github.com/satijalab/seurat/pull/5899)
--   Merged
-    [mojaveazure/seurat-object#44](https://github.com/mojaveazure/seurat-object/pull/44)
