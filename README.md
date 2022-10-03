@@ -47,22 +47,22 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 ## Recent Activity
 
 -   Merged
-    [mojaveazure/seurat-object#46](https://github.com/mojaveazure/seurat-object/pull/46)
+    [satijalab/seurat#6467](https://github.com/satijalab/seurat/pull/6467)
+-   Closed
+    [satijalab/seurat#6420](https://github.com/satijalab/seurat/issues/6420)
+-   Closed
+    [satijalab/seurat#6032](https://github.com/satijalab/seurat/issues/6032)
+-   Closed
+    [satijalab/seurat#6441](https://github.com/satijalab/seurat/issues/6441)
+-   Closed
+    [satijalab/seurat#6392](https://github.com/satijalab/seurat/issues/6392)
+-   Closed
+    [satijalab/seurat#6265](https://github.com/satijalab/seurat/issues/6265)
+-   Closed
+    [satijalab/seurat#6310](https://github.com/satijalab/seurat/issues/6310)
 -   Opened
-    [plotly/plotly.R#2131](https://github.com/plotly/plotly.R/pull/2131)
--   Published [satijalab/seurat
-    v4.1.1](https://github.com/satijalab/seurat/releases/tag/v4.1.1)
+    [Bioconductor/HDF5Array#50](https://github.com/Bioconductor/HDF5Array/issues/50)
+-   Closed
+    [satijalab/seurat#6102](https://github.com/satijalab/seurat/issues/6102)
 -   Merged
-    [satijalab/seurat#5905](https://github.com/satijalab/seurat/pull/5905)
--   Opened
-    [satijalab/seurat#5905](https://github.com/satijalab/seurat/pull/5905)
--   Published [mojaveazure/seurat-object
-    v4.1.0](https://github.com/mojaveazure/seurat-object/releases/tag/v4.1.0)
--   Merged
-    [mojaveazure/seurat-object#45](https://github.com/mojaveazure/seurat-object/pull/45)
--   Opened
-    [mojaveazure/seurat-object#45](https://github.com/mojaveazure/seurat-object/pull/45)
--   Opened
-    [rstudio/rstudio#11101](https://github.com/rstudio/rstudio/issues/11101)
--   Opened
-    [satijalab/seurat#5899](https://github.com/satijalab/seurat/pull/5899)
+    [satijalab/seurat#6208](https://github.com/satijalab/seurat/pull/6208)
