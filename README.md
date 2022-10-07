@@ -47,6 +47,10 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 ## Recent Activity
 
 -   Closed
+    [satijalab/seurat#6505](https://github.com/satijalab/seurat/issues/6505)
+-   Closed
+    [satijalab/seurat#6500](https://github.com/satijalab/seurat/issues/6500)
+-   Closed
     [satijalab/seurat#6448](https://github.com/satijalab/seurat/issues/6448)
 -   Merged
     [satijalab/seurat#6467](https://github.com/satijalab/seurat/pull/6467)
@@ -62,7 +66,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
     [satijalab/seurat#6265](https://github.com/satijalab/seurat/issues/6265)
 -   Closed
     [satijalab/seurat#6310](https://github.com/satijalab/seurat/issues/6310)
--   Opened
-    [Bioconductor/HDF5Array#50](https://github.com/Bioconductor/HDF5Array/issues/50)
--   Closed
-    [satijalab/seurat#6102](https://github.com/satijalab/seurat/issues/6102)
