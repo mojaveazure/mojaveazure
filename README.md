@@ -46,6 +46,7 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+- Opened [bnprks/BPCells#3](https://github.com/bnprks/BPCells/issues/3)
 - Closed
   [satijalab/seurat#6539](https://github.com/satijalab/seurat/issues/6539)
 - Closed
@@ -64,5 +65,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
   [satijalab/seurat#6771](https://github.com/satijalab/seurat/pull/6771)
 - Merged
   [mojaveazure/seurat-object#72](https://github.com/mojaveazure/seurat-object/pull/72)
-- Merged
-  [mojaveazure/seurat-object#71](https://github.com/mojaveazure/seurat-object/pull/71)
