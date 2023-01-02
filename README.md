@@ -61,3 +61,7 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
   [satijalab/seurat#6766](https://github.com/satijalab/seurat/issues/6766)
 - Merged
   [mojaveazure/seurat-object#74](https://github.com/mojaveazure/seurat-object/pull/74)
+- Merged
+  [satijalab/seurat#6771](https://github.com/satijalab/seurat/pull/6771)
+- Merged
+  [mojaveazure/seurat-object#72](https://github.com/mojaveazure/seurat-object/pull/72)
