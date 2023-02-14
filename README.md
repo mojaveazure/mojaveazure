@@ -46,6 +46,14 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 
 ## Recent Activity
 
+- Closed
+  [TileDB-Inc/TileDB-R#518](https://github.com/TileDB-Inc/TileDB-R/issues/518)
+- Merged
+  [TileDB-Inc/TileDB-R#519](https://github.com/TileDB-Inc/TileDB-R/pull/519)
+- Opened
+  [TileDB-Inc/TileDB-R#519](https://github.com/TileDB-Inc/TileDB-R/pull/519)
+- Opened
+  [TileDB-Inc/TileDB-R#518](https://github.com/TileDB-Inc/TileDB-R/issues/518)
 - Opened [bnprks/BPCells#3](https://github.com/bnprks/BPCells/issues/3)
 - Closed
   [satijalab/seurat#6539](https://github.com/satijalab/seurat/issues/6539)
@@ -57,11 +65,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
   [satijalab/seurat#6765](https://github.com/satijalab/seurat/issues/6765)
 - Closed
   [satijalab/seurat#6751](https://github.com/satijalab/seurat/issues/6751)
-- Closed
-  [satijalab/seurat#6766](https://github.com/satijalab/seurat/issues/6766)
-- Merged
-  [mojaveazure/seurat-object#74](https://github.com/mojaveazure/seurat-object/pull/74)
-- Merged
-  [satijalab/seurat#6771](https://github.com/satijalab/seurat/pull/6771)
-- Merged
-  [mojaveazure/seurat-object#72](https://github.com/mojaveazure/seurat-object/pull/72)
