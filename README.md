@@ -47,6 +47,12 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
 ## Recent Activity
 
 - Closed
+  [TileDB-Inc/tiledbsc#92](https://github.com/TileDB-Inc/tiledbsc/issues/92)
+- Merged
+  [single-cell-data/TileDB-SOMA#990](https://github.com/single-cell-data/TileDB-SOMA/pull/990)
+- Opened
+  [single-cell-data/TileDB-SOMA#990](https://github.com/single-cell-data/TileDB-SOMA/pull/990)
+- Closed
   [TileDB-Inc/TileDB-R#518](https://github.com/TileDB-Inc/TileDB-R/issues/518)
 - Merged
   [TileDB-Inc/TileDB-R#519](https://github.com/TileDB-Inc/TileDB-R/pull/519)
@@ -59,9 +65,3 @@ LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&s
   [satijalab/seurat#6539](https://github.com/satijalab/seurat/issues/6539)
 - Closed
   [satijalab/seurat#6692](https://github.com/satijalab/seurat/issues/6692)
-- Closed
-  [satijalab/seurat#6736](https://github.com/satijalab/seurat/issues/6736)
-- Closed
-  [satijalab/seurat#6765](https://github.com/satijalab/seurat/issues/6765)
-- Closed
-  [satijalab/seurat#6751](https://github.com/satijalab/seurat/issues/6751)
